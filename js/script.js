@@ -1,59 +1,34 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    background: #f5f5f5;
-}
+document.querySelector("#b1").addEventListener("click", function() {
+    if (document.querySelector("#p1o1").checked) {
+        document.querySelector("#resposta1").style.display = "block";
+        document.querySelector("#erro1").style.display = "none";
+        document.querySelector("#b1").style.display = "none";
+        document.querySelector("#pergunta2").style.display = "block"; 
+    } else {
+        document.querySelector("#erro1").innerText = "❌ Resposta errada!";
+        document.querySelector("#erro1").style.display = "block";
+    }
+});
 
-header, footer {
-    text-align: center;
-    background: #128003;
-    color: white;
-    padding: 1rem;
-}
+document.querySelector("#b2").addEventListener("click", function() {
+    if (document.querySelector("#p2o1").checked) {
+        document.querySelector("#resposta2").style.display = "block";
+        document.querySelector("#erro2").style.display = "none";
+        document.querySelector("#b2").style.display = "none";
+        document.querySelector("#pergunta3").style.display = "block"; 
+    } else {
+        document.querySelector("#erro2").innerText = "❌ Resposta errada! ";
+        document.querySelector("#erro2").style.display = "block";
+    }
+});
 
-.pergunta {
-    background: white;
-    margin: 1rem auto;
-    padding: 1rem;
-    max-width: 600px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
-
-#pergunta2, #pergunta3 { 
-    display: none; 
-}
-
-.resposta {
-    display: none;
-    background: #d4edda;
-    padding: 0.5rem;
-    border-radius: 5px;
-    margin-top: 0.5rem;
-}
-
-.erro {
-    display: none;
-    color: red;
-}
-
-.resposta img {
-  max-width: 250px; 
-  width: 100%;      
-  height: auto;    
-  display: block;
-  margin: 10px 0;
-}
-#historia{
-    display: flex;
-    justify-content: center;
-}
- #home img {
-  width: 70%;
-  max-width: 400px;   
-    
-} 
-.secao{
-    padding: 15px;
-    
-}
+document.querySelector("#b3").addEventListener("click", function() {
+    if (document.querySelector("#p3o1").checked) {
+        document.querySelector("#resposta3").style.display = "block";
+        document.querySelector("#erro3").style.display = "none";
+        document.querySelector("#b3").style.display = "none";
+    } else {
+        document.querySelector("#erro3").innerText = "❌ Resposta errada!";
+        document.querySelector("#erro3").style.display = "block";
+    }
+});
