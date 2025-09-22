@@ -3,7 +3,13 @@ document.querySelector("#b1").addEventListener("click", function() {
         document.querySelector("#resposta1").style.display = "block";
         document.querySelector("#erro1").style.display = "none";
         document.querySelector("#b1").style.display = "none";
-        document.querySelector("#pergunta2").style.display = "block"; 
+        document.querySelector("#pergunta2").style.display = "block";
+      
+
+document.querySelectorAll('input[name="p1"]').forEach(radio => {
+    radio.disabled = true;
+});
+document.querySelector("#b1").disabled = true; 
     } else {
         document.querySelector("#erro1").innerText = "❌ Resposta errada!";
         document.querySelector("#erro1").style.display = "block";
@@ -16,6 +22,11 @@ document.querySelector("#b2").addEventListener("click", function() {
         document.querySelector("#erro2").style.display = "none";
         document.querySelector("#b2").style.display = "none";
         document.querySelector("#pergunta3").style.display = "block"; 
+            
+        document.querySelectorAll('input[name="p2"]').forEach(radio => {
+        radio.disabled = true;
+});
+document.querySelector("#b2").disabled = true;
     } else {
         document.querySelector("#erro2").innerText = "❌ Resposta errada! ";
         document.querySelector("#erro2").style.display = "block";
@@ -27,6 +38,11 @@ document.querySelector("#b3").addEventListener("click", function() {
         document.querySelector("#resposta3").style.display = "block";
         document.querySelector("#erro3").style.display = "none";
         document.querySelector("#b3").style.display = "none";
+
+        document.querySelectorAll('input[name="p3"]').forEach(radio => {
+        radio.disabled = true;
+});
+document.querySelector("#b3").disabled = true;
     } else {
         document.querySelector("#erro3").innerText = "❌ Resposta errada!";
         document.querySelector("#erro3").style.display = "block";
